@@ -1,7 +1,7 @@
 {
-  "name": "wtf-webpack-starterkit",
+  "name": "Weather",
   "version": "1.0.1",
-  "description": "WTF Webpack starterkit",
+  "description": "Weather",
   "main": "index.js",
   "private": true,
   "scripts": {
