@@ -1,13 +1,4 @@
-import '../scss/main.scss';
 import { API_Key } from "../js/key"
-
-// uncomment the lines below to enable PWA
-import { registerSW } from './pwa.js';
-registerSW();
-
-/* place your code below */
-
-
 
 const input = document.querySelector('input')
 const button = document.querySelector('button')
@@ -38,21 +29,21 @@ const getWeather = () => {
         input.value = ''
 
         if (status.id >= 200 && status.id < 300) {
-            photo.setAttribute('src', 'src/assets/img/thunderstorm.png')
+            photo.setAttribute('src', '../assets/img/thunderstorm.png')
         } else if (status.id >= 300 && status.id < 400) {
-            photo.setAttribute('src', 'src/assets/img/drizzle.png')
+            photo.setAttribute('src', '../assets/img/drizzle.png')
         } else if (status.id >= 500 && status.id < 600) {
-            photo.setAttribute('src', 'src/assets/img/rain.png')
+            photo.setAttribute('src', '../assets/img/rain.png')
         } else if (status.id >= 600 && status.id < 700) {
-            photo.setAttribute('src', 'src/assets/img/ice.png')
+            photo.setAttribute('src', './img/ice.png')
         } else if (status.id >= 700 && status.id < 800) {
-            photo.setAttribute('src', 'src/assets/img/fog.png')
+            photo.setAttribute('src', './img/fog.png')
         } else if (status.id === 800) {
-            photo.setAttribute('src', 'src/assets/img/sun.png')
+            photo.setAttribute('src', './img/sun.png')
         } else if (status.id >= 800 && status.id < 900) {
-            photo.setAttribute('src', 'src/assets/img/cloud.png')
+            photo.setAttribute('src', './img/cloud.png')
         } else {
-            photo.setAttribute('src', 'src/assets/img/unknown.png')
+            photo.setAttribute('src', './img/unknown.png')
         }
     }).catch(() => warning.textContent = 'Please enter a valid city name!')
 }
@@ -65,8 +56,8 @@ const enterCheck = (e) => {
 
 input.addEventListener('keyup', enterCheck)
 getWeather()
-button.addEventListener('click', getWeather)
-// button.addEventListener('click', function () {
-//     console.log('button working');
+// button.addEventListener('click', getWeather)
+button.addEventListener('click', function () {
+    console.log('button working');
 
-// })
+})
